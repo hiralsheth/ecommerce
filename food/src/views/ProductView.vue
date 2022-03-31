@@ -7,7 +7,7 @@
                 <div class="small mb-1">Code: {{ product.id}} </div>
                 <h1 class="display-5 fw-bolder">{{ product.name }}</h1>
                 <div class="fs-5 mb-5">
-                    <span>${{ product.price.CAD.toFixed(2) }}</span>
+                    <span>${{ product.price.toFixed(2) }}</span>
                 </div>
                 <p class="lead">Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
                 <div class="d-flex">

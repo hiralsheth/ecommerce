@@ -6,3 +6,5 @@ createApp(App).use(router).mount('#app')
 import '@/assets/img/bg.jpg'
 import '@/assets/img/foodies.gif'
 import '@/assets/logo.png'
+import'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'

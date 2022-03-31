@@ -1,5 +1,5 @@
 const db = require("../models");
-const Product = db.products;
+const Product = db.product;
 const Op = db.Sequelize.Op;
 exports.create = (req, res) => {
   //console.log(req.body)
@@ -14,7 +14,7 @@ exports.create = (req, res) => {
     });
 };
 exports.findAll = (req, res) => {
-  //console.log('you are here')
+ 
   Product.findAll()
     .then((data) => {
       res.send(data);
