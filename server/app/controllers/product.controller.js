@@ -5,50 +5,50 @@ exports.create = (req, res) => {
   //console.log(req.body)
   Product.create(req.body)
     .then((data) => {
-      res.send(data);
+      res.send(data)
     })
     .catch((err) => {
       res.status(500).send({
-        message: err.message || "could not insert data",
-      });
-    });
-};
+        message: err.message || "could not insert data"
+      })
+    })
+}
 exports.findAll = (req, res) => {
  
   Product.findAll()
     .then((data) => {
-      res.send(data);
+      res.send(data)
     })
     .catch((err) => {
       res.status(500).send({
-        message: err.message || "Some error occurred while loading the data",
-      });
-    });
-};
+        message: err.message || "Some error occurred while loading the data"
+      })
+    })
+}
 exports.findOne = (req, res) => {
   //console.log(req.params.id)
   const id = req.params.id;
   Product.findByPk(id)
     .then((data) => {
-      res.send(data);
+      res.send(data)
     })
     .catch((err) => {
       res.status(500).send({
         message:
           err.message ||
-          `Some error occurred while loading the data id ${id}`,
-      });
-    });
-};
+          `Some error occurred while loading the data id ${id}`
+      })
+    })
+}
 exports.update = (req, res) => {
   const id = req.params.id;
   Product.update(req.body, {
-    where: { id: id },
+    where: { id: id }
   })
     .then((num) => {
       if (num == 1) {
         res.send({
-          message: "Product was updated successfully.",
+          message: "Product was updated successfully."
         });
       } else {
         res.send({

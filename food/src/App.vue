@@ -92,7 +92,7 @@
       </header>
     </div>
   </nav>
-  <router-view :inventory="inventory" :addToCart="addToCart" />
+  <router-view :inventory="inventory" :addToCart="addToCart" :addInv = "addInventory" />
 
   <SideBar
     v-if="showSideBar"
@@ -106,7 +106,7 @@
 
 
 <script>
-import ProductDataService from "@/services/ProductDataServices";
+import ProductDataService from "@/services/ProductDataService";
 import SideBar from "@/components/SideBar.vue";
 export default {
   components: {
@@ -132,6 +132,10 @@ export default {
     removeItem(name) {
       delete this.cart[name];
     },
+    
+    addInventory(data){
+      this.inventory.push(data)
+    }
   },
   computed: {
     totalQuantity() {
